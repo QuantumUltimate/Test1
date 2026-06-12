@@ -1,0 +1,1 @@
+function benchmark:bin/profiler/stop

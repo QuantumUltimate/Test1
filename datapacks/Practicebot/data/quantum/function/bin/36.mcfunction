@@ -1,0 +1,2 @@
+item replace entity @s weapon.offhand with shield
+execute if score .mode mode matches 3 if score @p[tag=xlib_target,scores={fall_distance=15..}] horiz_distance_to_target matches ..6 unless score @s gap_timer matches 1.. run item replace entity @s weapon.offhand with totem_of_undying

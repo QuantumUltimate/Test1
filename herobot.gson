@@ -1,0 +1,8 @@
+{
+  "creativeNoClip": true,
+  "shieldStunning": true,
+  "windChargeNoTrigger": true,
+  "xpNoCooldown": true,
+  "deleteChunkEntities": true,
+  "editablePlayerNbt": true
+}

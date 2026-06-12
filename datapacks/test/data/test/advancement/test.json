@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirements": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "blocked": true,
+          "type": {
+            "is_direct": true
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "test:sayhi"
+  }
+}

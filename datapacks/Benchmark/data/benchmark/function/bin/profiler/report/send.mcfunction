@@ -1,0 +1,2 @@
+tellraw @a [{"text":"","color":"gray"},{"text":"[","color":"red"},"Benchmark",{"text":"]","color":"red"},{"text":" Profiles gathered:","color":"dark_green"}]
+function benchmark:bin/profiler/report/one_at_a_time

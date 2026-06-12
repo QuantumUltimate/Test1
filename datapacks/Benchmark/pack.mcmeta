@@ -1,0 +1,25 @@
+{
+	"pack": {
+		"min_format": 48,
+		"max_format": [94,1],
+		"pack_format": 88,
+		"supported_formats": [48,94],
+		"description": "Benchmark datapack to test function efficiency",
+		"version": "2.2.0",
+		"authors": "Kragast, Dominexis"
+	},
+	"overlays": {
+		"entries": [
+			{
+				"min_format": [91,0],
+				"max_format": 2147483647,
+				"directory": "stopwatch_91.0"
+			},
+			{
+				"min_format": [92,0],
+				"max_format": 2147483647,
+				"directory": "gamerules_92.0"
+			}
+		]
+	}
+}

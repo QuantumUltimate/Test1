@@ -1,0 +1,14 @@
+{
+  "pack": {
+    "pack_format": 94,
+    "description": ""
+  }
+"filter": {
+  "block": [
+  {
+    "namespace": "minecraft",
+    "path": "worldgen/structure_set
+  }
+  ]
+}
+}

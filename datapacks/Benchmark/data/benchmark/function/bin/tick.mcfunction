@@ -1,0 +1,1 @@
+execute if score is_active benchmark.var matches 1 run function benchmark:bin/profiler/tick
