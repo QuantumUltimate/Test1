@@ -6,6 +6,8 @@ execute if score .mode mode matches 300..399 run function quantum:options/mace
 execute if score .mode mode matches 400..599 run function quantum:options/pot
 execute if score .mode mode matches 600..699 run function quantum:options/cart
 schedule clear quantum:map/start3
+schedule clear mech_train:generic/flick_aim.mcfunction/loop
+schedule clear quantum:bin/38
 forceload remove all
 effect clear @a
 execute in overworld run scoreboard players set .resetcd resetcd 40
@@ -22,19 +24,21 @@ tag @s remove macing
 
 # Set scores
 execute if score @a[tag=xlib_target,limit=1] death matches 1.. in overworld run scoreboard players add bot score 1
-execute unless entity @a[tag=xlib_bot] unless score .start start matches 0 run scoreboard players add player score 1
+execute unless entity @a[tag=xlib_bot] if score .start start matches 1 run scoreboard players add player score 1
 
 # Display winner
-execute if score @a[tag=xlib_target,limit=1] death matches 1.. unless score .start start matches 0 in overworld run title @a title {"text":"You lost!","color":"red"}
-execute if score @a[tag=xlib_bot,limit=1] death matches 1.. unless score .start start matches 0 in overworld run title @a title {"text":"You won!","color":"green"}
+execute if score @a[tag=xlib_target,limit=1] death matches 1.. if score .start start matches 1 in overworld run title @a title {"text":"You lost!","color":"red"}
+execute if score @a[tag=xlib_bot,limit=1] death matches 1.. if score .start start matches 1 in overworld run title @a title {"text":"You won!","color":"green"}
 
 # Display scores
-# execute unless score .start start matches 0 run execute in overworld run title @a subtitle {"text":"Score:","color": "yellow"}
+# execute if score .start start matches 1 run execute in overworld run title @a subtitle {"text":"Score:","color": "yellow"}
 execute as @a[tag=xlib_bot,name=!quantumbot] run player @s disconnect
+function stats:calculate_stats
 
 # Reset
 kill @e[type=item]
-execute as @a[tag=xlib_target] run function quantum:map/tp_to_prev_hub
+kill @e[tag=killable]
+execute as @a[tag=xlib_target] run function quantum:bin/40
 execute in overworld run tp @a[tag=xlib_bot] 11 6 10
 execute in overworld run setblock 11 5 10 barrier
 execute in overworld run scoreboard players set .start start 0
@@ -45,3 +49,4 @@ function quantum:kits/loadkit
 execute in overworld run scoreboard players set @a death 0
 stopsound @a
 tellraw @a {"text":"<quantumbot> ggs!"}
+execute unless entity @a[name=quantumbot] run function quantum:miscellaneous/botspawning

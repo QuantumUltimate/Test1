@@ -1,6 +1,23 @@
-# Marks the player as not new anymore, so that stats and samples won't be reset again
-scoreboard players set @s samples 1
+# Avg distance
+scoreboard players set .num_of_player_hits stats 0
+scoreboard players set .avg_distance stats 0
 
-# This contains the actial values for each stat (as a percentage or as a number)
-scoreboard players set .avg_distance stats 20
-scoreboard players set .percent_disabled stats 0
+# Shield disable
+scoreboard players set .num_of_blocked_hits stats 0
+scoreboard players set .num_of_player_disables stats 0
+
+# Crystal speed
+scoreboard players set .crystal_speed stats 0
+scoreboard players set @a crystal_speed_tick_timer 0
+scoreboard players set @a num_of_crystals_placed 0
+
+# Anchor speed
+scoreboard players set .anchor_speed stats 0
+scoreboard players set @a anchor_speed_tick_timer 0
+scoreboard players set @a num_of_anchors_placed 0
+
+# Safe anchor speed
+scoreboard players set .safe_anchor_speed stats 0
+scoreboard players set @a safe_anchor_speed_tick_timer 0
+scoreboard players set @a num_of_safe_anchors_placed 0
+tag @s remove placed_glowstone

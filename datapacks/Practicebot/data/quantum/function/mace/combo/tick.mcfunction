@@ -21,7 +21,7 @@ execute if score @s hit_decision matches 1 if score .breach toggles matches 1 un
 execute if score @s slam_decision matches 1 unless score @p[tag=xlib_target] disable_shield_decision matches 1 run function quantum:mace/combo/tick_line_25
 
 # Far Pearl
-execute if entity @s[scores={pearlcd=..0,Pos1_difference=..0}] if score .far_pearl toggles matches 1 at @p[tag=xlib_target,distance=5..,predicate=!quantum:vmotion_m1,predicate=!quantum:vmotion2] if function quantum:miscellaneous/random if function quantum:decisions/airborne2 at @s run function quantum:mace/far_pearl
+execute if entity @s[scores={pearlcd=..0,Pos1_difference=..0}] if score .far_pearl toggles matches 1 at @p[tag=xlib_target,distance=5..,predicate=!quantum:vmotion_m3,predicate=!quantum:vmotion2] if function quantum:miscellaneous/random if function quantum:decisions/airborne2 at @s run function quantum:mace/far_pearl
 execute at @s[tag=wind_pearl] run function quantum:mace/wind_pearl
 execute at @s[scores={pearlcd=..0,windcd=..0,wind_pearl_cd=..0,Pos1_difference=..-5},predicate=!quantum:vmotion_m5] if score .wind_pearl toggles matches 1 run function quantum:mace/tick_line_37
 

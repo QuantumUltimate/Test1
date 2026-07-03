@@ -1,5 +1,5 @@
 scoreboard players set .eval eval 0
-scoreboard players operation .eval eval += @s saturation_difference
+execute unless score .mode mode matches 4..5 run scoreboard players operation .eval eval += @s saturation_difference
 scoreboard players operation .eval eval += @s hp
 scoreboard players operation .eval eval += @s eval_hit
 scoreboard players operation .eval eval += @s eval_cobweb

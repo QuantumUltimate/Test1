@@ -92,7 +92,9 @@ scoreboard players set @a gap_timer 0
 scoreboard players set @a empty_water_cd 0
 scoreboard players set @a crossbow_timer 0
 scoreboard players set @a slowcast.step.count 0
+scoreboard players set @a arrows_in_air 0
 
+function quantum:kits/loadkit
 execute if score .mode mode matches 4..5 if score .gear toggles matches 2 as @a run attribute @s attack_damage base set 1.33
 execute unless score .gear toggles matches 2 as @a run attribute @s attack_damage base set 1.0
 execute unless score .mode mode matches 4..5 as @a run attribute @s attack_damage base set 1.0

@@ -39,3 +39,6 @@ execute if score .mode mode matches 604 run return run function mech_train:cart/
 execute if score .mode mode matches 605 run return run function mech_train:cart/1/tick
 execute if score .mode mode matches 606 run return run function mech_train:cart/2/tick
 execute if score .mode mode matches 607 run return run function mech_train:cart/3/tick
+
+# Generic
+execute if score .mode mode matches 701 run function mech_train:generic/flick_aim.mcfunction/tick

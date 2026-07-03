@@ -10,5 +10,9 @@ execute at @s[scores={real_hitcd=2..}] if score .buffs toggles matches 1 if scor
 # S tap
 # execute as @s[scores={hitcd=5..}] if score .stap toggles matches 1 if score .buffs toggles matches 1 run player @s move backward
 # execute as @s[scores={hitcd=7..}] at @s facing entity @p[tag=xlib_target] feet positioned ^ ^ ^1.6836 if score @s in_range matches 1 unless score @s tempshield matches 1 if score .stap toggles matches 1 run player @s move backward
+execute if entity @p[tag=xlib_target,predicate=quantum:half_neth] if score @s[scores={hitcd=4}] distance_to_target < .tempreach reach run scoreboard players add @s real_hitcd 1
+execute unless entity @p[tag=xlib_target,predicate=quantum:half_neth] if score @s[scores={hitcd=6}] distance_to_target < .tempreach reach run scoreboard players add @s real_hitcd 1
+execute at @s[scores={real_hitcd=5..}] if entity @p[tag=xlib_target,predicate=quantum:half_neth] if score .stap toggles matches 1 run player @s move backward
 execute at @s[scores={real_hitcd=7..}] if score .stap toggles matches 1 run player @s move backward
 execute at @s[scores={real_hitcd=7..}] if score .mode mode matches 6 run player @s move backward
+execute at @s[scores={real_hitcd=7..}] if score .mode mode matches 3 run player @s move backward

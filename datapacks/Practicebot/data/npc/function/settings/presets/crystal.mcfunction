@@ -18,7 +18,6 @@ function npc:settings/off/wind_pearl
 function npc:settings/off/airborne_sf
 function npc:settings/off/res
 function npc:settings/on/better_shield
-function npc:settings/on/shield
 function npc:settings/on/neth
 function npc:settings/on/sbp
 function npc:settings/on/display_shield_dura

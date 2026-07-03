@@ -13,12 +13,12 @@ function quantum:sword/bot_mech/logic
 execute if score .mode mode matches 6 run function quantum:sword/scrit
 execute if score @s tempscrit matches 1 if score .gear toggles matches 2 unless score .mode mode matches 6 run function quantum:sword/scrit
 
-function quantum:sword/bot_mech/jump
+execute unless score @s bowcharge matches 1.. unless score @s arrows_in_air matches 1.. run function quantum:sword/bot_mech/jump
 
 execute if score @s crit_decision matches 1 run function quantum:sword/crit
 execute if score @s crit_decision matches 0 if score @s hit_decision matches 1 unless function quantum:sword/pcrit run function quantum:sword/combo/hit
-execute if score .gear toggles matches 1 if entity @s[scores={bowcharge=..0,pearlcd=..0}] unless score .mode mode matches 4..5 unless score @s airborne matches 1 unless entity @a[tag=xlib_target,distance=..9] unless score @p[tag=xlib_target] airborne matches 1 run function quantum:g1gc/pearl
-execute if score @s tempstrafe matches 1 unless score @s airborne matches 1 run function quantum:sword/bot_mech/strafe
+function quantum:bin/41
+execute if score @s tempstrafe matches 1 unless score @s bowcharge matches 1.. unless score @s arrows_in_air matches 1.. run function quantum:sword/bot_mech/strafe
 execute unless score .mode mode matches 4..5 run function quantum:cobwebs/fluid_main
 execute unless score .mode mode matches 3 run scoreboard players set @a disable_shield_decision 0
 execute unless score .mode mode matches 6 unless score .mode mode matches 3 run function quantum:decisions/tick2

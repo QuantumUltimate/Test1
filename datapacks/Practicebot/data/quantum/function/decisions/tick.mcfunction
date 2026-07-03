@@ -20,7 +20,7 @@ execute if score .mode mode matches 3 run function quantum:decisions/spear
 
 # Mace
 execute if score .mode mode matches 3 run scoreboard players set @s[scores={in_range=1,can_see_target=1},predicate=quantum:fall_distance15] slam_decision 1
-execute at @s[scores={hitcd=1..}] if entity @p[tag=xlib_target,scores={hurtTime=1..,shield_cd=..90}] run scoreboard players set @s slam_decision 0
+execute at @s[scores={hitcd=1..}] if entity @p[tag=xlib_target,scores={hurtTime=1..,shield_cd=..90,disablecd=0}] run scoreboard players set @s slam_decision 0
 
 # Sword crit
 scoreboard players set @s[scores={hitcd=..0,crit_decision_without_cd=1..}] crit_decision 1

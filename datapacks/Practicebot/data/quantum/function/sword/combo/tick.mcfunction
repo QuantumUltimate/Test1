@@ -8,8 +8,8 @@ execute unless score .mode mode matches 4..5 if score @s state matches 3 run fun
 execute unless score .mode mode matches 4..5 if score @s state matches 3 run return run function quantum:decisions/tick2
 function quantum:sword/bot_mech/combo_logic
 function quantum:sword/bot_mech/distance
-execute if score .gear toggles matches 1 at @s[scores={bowcharge=..0,pearlcd=..0}] unless score .mode mode matches 4..5 unless score @s airborne matches 1 unless entity @a[tag=xlib_target,distance=..9] unless score @p[tag=xlib_target] airborne matches 1 run function quantum:g1gc/pearl
-execute if score @s tempstrafe matches 1 at @s run function quantum:sword/bot_mech/strafe
+function quantum:bin/41
+execute if score @s tempstrafe matches 1 unless score @s airborne matches 1 at @s unless score @s bowcharge matches 1.. unless score @s arrows_in_air matches 1.. run function quantum:sword/bot_mech/strafe
 execute if score @s hit_decision matches 1 at @s run function quantum:sword/combo/hit
 execute unless score .mode mode matches 4..5 run function quantum:cobwebs/fluid_main
 execute unless score .mode mode matches 3 run scoreboard players set @a disable_shield_decision 0

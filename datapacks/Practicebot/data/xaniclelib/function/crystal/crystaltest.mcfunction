@@ -1,2 +1,2 @@
 setblock ~ ~ ~ air
-execute unless block ~ ~-2 ~ obsidian if function quantum:mark/blockplace positioned ~ ~1 ~ if function quantum:g1gc/block positioned ~ ~-1 ~ if function xaniclelib:check/intersect1 positioned ~ ~1 ~ if function xaniclelib:check/raycast run summon marker ~ ~-1 ~ {Tags:["crystal_1","xlib","loc"]}
+execute unless block ~ ~-2 ~ obsidian if function quantum:mark/blockplace positioned ~ ~1 ~ if function quantum:g1gc/block if function xaniclelib:check/raycast positioned ~ ~-1 ~ if function xaniclelib:check/intersect1 run summon marker ~ ~ ~ {Tags:["crystal_1","xlib","loc"]}

@@ -16,6 +16,7 @@
     "lava",
     "cobweb",
     "command_block",
-    "snow"
+    "snow",
+    "#replaceable"
   ]
 }

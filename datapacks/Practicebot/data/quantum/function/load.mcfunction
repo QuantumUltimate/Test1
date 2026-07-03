@@ -176,6 +176,18 @@ scoreboard objectives add stats dummy
 scoreboard objectives add samples dummy
 scoreboard objectives add first_sample dummy
 scoreboard objectives add aim dummy
+scoreboard objectives add tick_timer dummy
+scoreboard objectives add anchor_speed_tick_timer dummy
+scoreboard objectives add safe_anchor_speed_tick_timer dummy
+scoreboard objectives add crystal_speed_tick_timer dummy
+scoreboard objectives add inital_crystal_placement dummy
+scoreboard objectives add num_of_crystals_placed dummy
+scoreboard objectives add num_of_anchors_placed dummy
+scoreboard objectives add num_of_safe_anchors_placed dummy
+scoreboard objectives add num_of_thrown_pearls minecraft.used:minecraft.ender_pearl
+scoreboard objectives add num_of_thrown_wind_charges minecraft.used:minecraft.wind_charge
+scoreboard objectives add id dummy
+scoreboard objectives add threw_pearl minecraft.used:minecraft.ender_pearl
 
 # Decisions
 scoreboard objectives add decisions dummy
@@ -285,6 +297,7 @@ scoreboard players set @a gap_timer 0
 scoreboard players set @a empty_water_cd 0
 scoreboard players set @a crossbow_timer 0
 scoreboard players set @a slowcast.step.count 0
+scoreboard players set @a arrows_in_air 0
 execute as @a unless score @s samples matches 1.. run scoreboard players set @s samples 0
 scoreboard players enable @a rk
 advancement revoke @a only quantum:hitplayer

@@ -1,5 +1,4 @@
 gamemode survival @a
-attribute @s max_health base set 10
 attribute @s max_health base set 20
 attribute @s gravity base set 0.08
 function mech_train:generic/loadkit

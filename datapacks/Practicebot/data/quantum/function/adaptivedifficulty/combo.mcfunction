@@ -1,5 +1,4 @@
 advancement revoke @s only quantum:hitplayer
-execute if entity @s[tag=xlib_bot] as @p[tag=xlib_target] at @s anchored eyes store result score @s distance_to_target run distance from ^ ^ ^ toHitbox @p[tag=xlib_bot] e 1
 execute if score .mode mode matches 2 run return 0
 
 # Jump reset if damaged

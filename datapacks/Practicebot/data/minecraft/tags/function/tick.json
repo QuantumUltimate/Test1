@@ -1,5 +1,6 @@
 {
     "values": [
-    "quantum:tick"
+    "quantum:tick",
+    "stats:tick"
  ]
 }

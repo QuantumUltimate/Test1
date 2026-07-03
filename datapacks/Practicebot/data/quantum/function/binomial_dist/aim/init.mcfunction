@@ -1,4 +1,5 @@
 # Make it so that if predicate random60 run scoreboard playrs add tmepreach 1 and make the distance use tempreach instead of reach. Make the loop repeat until tempreach reaches a max of 30
+execute if score .difficulty difficulty matches 0 run return run scoreboard players set .tempaim aim 1
 scoreboard players operation .tempaim aim = @s aim
 scoreboard players set .loop_count temp 1
 # execute if score .difficulty difficulty matches 5 run return 0

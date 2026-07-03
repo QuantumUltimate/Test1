@@ -10,9 +10,9 @@ execute if score .slowfall toggles matches 1 if score .mode mode matches 2 run e
 execute at @n[type=snowball] positioned over motion_blocking_no_leaves run tp @a ~ ~ ~
 kill @e[type=#quantum:magic_items,distance=0..]
 scoreboard players set @a pearl_count 0
-execute as @e[distance=0..,type=ender_pearl] at @s on origin run function quantum:bin/8
+execute as @e[type=ender_pearl] at @s on origin run function quantum:bin/8
 
-execute as @e[distance=0..,type=creeper] run data modify entity @s ignited set value 1b
+execute as @e[type=creeper] run data modify entity @s ignited set value 1b
 kill @e[type=#arrows,nbt={inGround:1b},distance=0..]
 execute as @a[tag=xlib_target,scores={rk=1..}] run function quantum:miscellaneous/rekit
 

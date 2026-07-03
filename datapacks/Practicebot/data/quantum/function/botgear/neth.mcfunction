@@ -53,7 +53,8 @@ execute unless score .mode mode matches 2 run item replace entity @s inventory.1
 execute if score .mode mode matches 2 run item replace entity @s inventory.0 with tipped_arrow[potion_contents={potion:"minecraft:long_slow_falling"},max_stack_size=99] 99
 execute if score .mode mode matches 2 run item replace entity @s inventory.1 with tipped_arrow[potion_contents={potion:"minecraft:long_slow_falling"},max_stack_size=99] 99
 
-execute unless score .mode mode matches 2 unless score .mode mode matches 4..5 if score .shield toggles matches 1 run item replace entity @s weapon.offhand with shield[death_protection={death_effects:[{type:"clear_all_effects"},{type:"apply_effects",effects:[{id:"minecraft:regeneration",amplifier:1,duration:900},{id:"minecraft:fire_resistance",amplifier:0,duration:800},{id:"minecraft:absorption",amplifier:1,duration:100}]}]},enchantments={unbreaking:3,mending:1},unbreakable={}]
+execute unless score .mode mode matches 2 unless score .mode mode matches 4..5 if score .shield toggles matches 1 if score .healing toggles matches 0 run item replace entity @s weapon.offhand with shield[death_protection={death_effects:[{type:"clear_all_effects"},{type:"apply_effects",effects:[{id:"minecraft:regeneration",amplifier:1,duration:900},{id:"minecraft:fire_resistance",amplifier:0,duration:800},{id:"minecraft:absorption",amplifier:1,duration:100}]}]},enchantments={unbreaking:3,mending:1},unbreakable={}]
+execute unless score .mode mode matches 2 unless score .mode mode matches 4..5 if score .shield toggles matches 1 if score .healing toggles matches 1 run item replace entity @s weapon.offhand with shield[enchantments={unbreaking:3,mending:1},unbreakable={}]
 
 scoreboard players set .gear toggles 1
 

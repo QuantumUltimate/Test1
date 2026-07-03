@@ -14,7 +14,6 @@ execute at @s if score .lava toggles matches 1 run fill ~-4 ~ ~-4 ~4 ~1 ~4 comma
 
 # Check places to cobweb or lava
 kill @e[tag=in_player,distance=0..,type=marker]
-execute at @a[tag=xlib_target] run fill ~-0.3 ~ ~-0.3 ~0.3 ~1 ~0.3 command_block{auto:1b,Command:"function quantum:decisions/in_player"} replace #fire
-execute at @a[tag=xlib_target] run fill ~-0.3 ~ ~-0.3 ~0.3 ~1 ~0.3 command_block{auto:1b,Command:"function quantum:decisions/in_player"} replace #air
+execute at @a[tag=xlib_target] run fill ~-0.3 ~ ~-0.3 ~0.3 ~1 ~0.3 command_block{auto:1b,Command:"function quantum:decisions/in_player"} replace #replaceable
 # execute at @a[tag=xlib_target,scores={in_cobweb_decision=1}] run fill ~-0.3 ~ ~-0.3 ~0.3 ~1 ~0.3 command_block{auto:1b,Command:"function quantum:decisions/in_player_water"} replace water[level=0]
 execute at @a[tag=xlib_target,predicate=quantum:fire_res,scores={in_cobweb_decision=1},predicate=!quantum:fire] run fill ~-0.3 ~ ~-0.3 ~0.3 ~1 ~0.3 command_block{auto:1b,Command:"function quantum:decisions/in_player_water"} replace water[level=0]
